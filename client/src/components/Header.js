@@ -8,10 +8,14 @@ export default class Header extends Component {
     // functional logic Header
     // XML (JSX) goes into return
     return (
-      <div>
+      <div className="link">
         <NavLink to='/'>Counter</NavLink>
         <br />
         <NavLink to='/Clock'>Clock</NavLink>
+        <br />
+        <NavLink to='/Timer'>Timer</NavLink>
+        <br />
+        <NavLink to='/Alarm'>Alarm</NavLink>
       </div>
     )
   }

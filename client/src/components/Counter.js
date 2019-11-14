@@ -14,12 +14,23 @@ export default class Counter extends Component {
       count: this.state.count + 1
     })
   }
+  handleDecrement = (e) => {
+    this.setState({
+      count: this.state.count - 1
+    })
+  }
+  reset = (e) => {
+    this.setState({
+      count: 0
+    })
+  }
   render() {
-
     return (
       <div>
-        <button onClick={this.handleIncrement}>Button</button>
-        <h3>Count = {this.state.count}</h3>
+        <button className ="button" onClick={this.handleIncrement}>Increment</button>
+        <button className ="button"onClick={this.handleDecrement}>Decrement</button>
+        <button className ="button" onClick={this.reset}>Reset</button>
+        <h3>Current Count = {this.state.count}</h3>
       </div>
     )
   }
